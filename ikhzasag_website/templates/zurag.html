@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% block title %}Зургийн цомог{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <h1>Зургийн цомог</h1>
+        <p>Сургуулийн орчин, үйл ажиллагаа</p>
+    </div>
+</section>
+
+<section class="section container">
+    <h2>Манай сургуулийн орчин</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=700&q=80"
+                alt="Сургуулийн барилга"
+                style="width:100%;height:190px;object-fit:cover;border-radius:8px;"
+            >
+            <h3>Сургуулийн орчин</h3>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=700&q=80"
+                alt="Сургалтын орчин"
+                style="width:100%;height:190px;object-fit:cover;border-radius:8px;"
+            >
+            <h3>Сургалтын орчин</h3>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&q=80"
+                alt="Оюутнууд"
+                style="width:100%;height:190px;object-fit:cover;border-radius:8px;"
+            >
+            <h3>Оюутны амьдрал</h3>
+        </div>
+    </div>
+
+    <div class="notice">
+        Эдгээр нь жишээ зураг бөгөөд Их Засагийн бодит зураг биш.
+        Бодит сургуулийн зургийг дараа нь сольж оруулна.
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,60 @@
+
+{% extends "base.html" %}
+{% block title %}Мэргэжлүүд{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <h1>Сургалтын мэргэжлүүд</h1>
+        <p>Өөрт тохирох мэргэжлээ сонгоорой.</p>
+    </div>
+</section>
+
+<section class="section container">
+    <input
+        class="search"
+        id="search"
+        type="text"
+        placeholder="🔍 Мэргэжлийн нэрээр хайх..."
+        oninput="searchMajor()"
+    >
+
+    <div class="cards" id="majorList">
+        {% for m in majors %}
+        <div class="card major">
+            <div class="icon">{{ m.icon }}</div>
+            <h3>{{ m.name }}</h3>
+            <p>Хугацаа: {{ m.duration }}</p>
+            <span class="pill">{{ m.type }}</span>
+            <a href="/mergejil/{{ m.slug }}">Дэлгэрэнгүй үзэх →</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <p id="empty" style="display:none; padding:20px;">
+        Тохирох мэргэжил олдсонгүй.
+    </p>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function searchMajor() {
+    let value = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".major");
+    let count = 0;
+
+    cards.forEach(function(card) {
+        if (card.innerText.toLowerCase().includes(value)) {
+            card.style.display = "block";
+            count++;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    document.getElementById("empty").style.display =
+        count === 0 ? "block" : "none";
+}
+</script>
+{% endblock %}

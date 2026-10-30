@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+{% block title %}{{ major.name }}{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <div class="eyebrow">МЭРГЭЖЛИЙН МЭДЭЭЛЭЛ</div>
+        <h1>{{ major.icon }} {{ major.name }}</h1>
+    </div>
+</section>
+
+<main class="container content">
+    <h2>Хөтөлбөрийн мэдээлэл</h2>
+
+    <p><b>Мэргэжил:</b> {{ major.name }}</p>
+    <p><b>Суралцах хугацаа:</b> {{ major.duration }}</p>
+    <p><b>Сургалтын төрөл:</b> {{ major.type }}</p>
+
+    <h2>Эзэмших ур чадвар</h2>
+    <ul>
+        <li>Мэргэжлийн онолын мэдлэг</li>
+        <li>Практик дадлага</li>
+        <li>Асуудал шийдвэрлэх чадвар</li>
+        <li>Багаар ажиллах чадвар</li>
+    </ul>
+
+    <div class="notice">
+        Эдгээр нь танилцуулгын ерөнхий мэдээлэл.
+        Албан ёсны сургалтын хөтөлбөр, төлбөр, элсэлтийн
+        шаардлагыг сургуулиас баталгаажуулна уу.
+    </div>
+
+    <a class="btn" href="/elselt">Элсэлтийн мэдээлэл</a>
+    <a href="/mergejil">← Бүх мэргэжил</a>
+</main>
+{% endblock %}

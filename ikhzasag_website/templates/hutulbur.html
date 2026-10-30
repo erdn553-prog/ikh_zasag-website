@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% block title %}Сургалтын хөтөлбөр{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <h1>Сургалтын хөтөлбөр</h1>
+        <p>Мэргэжил болон суралцах хугацаа</p>
+    </div>
+</section>
+
+<main class="container content">
+    <h2>Мэргэжлийн жагсаалт</h2>
+
+    <div style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th>№</th>
+                <th>Мэргэжил</th>
+                <th>Хугацаа</th>
+                <th>Төрөл</th>
+            </tr>
+
+            {% for m in majors %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ m.name }}</td>
+                <td>{{ m.duration }}</td>
+                <td>{{ m.type }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="notice">
+        Сургалтын дэлгэрэнгүй агуулга, хичээлийн цаг,
+        кредит болон төлбөрийг сургуулиас баталгаажуулна уу.
+    </div>
+</main>
+{% endblock %}

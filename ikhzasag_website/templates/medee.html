@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% block title %}Мэдээ мэдээлэл{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <h1>Мэдээ, мэдээлэл</h1>
+        <p>Сургуулийн үйл ажиллагаа</p>
+    </div>
+</section>
+
+<section class="section container">
+    <div class="cards">
+        <div class="card">
+            <div class="icon">📢</div>
+            <h3>Элсэлтийн зар</h3>
+            <p>Элсэлтийн шинэ мэдээллийг энд байрлуулна.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏫</div>
+            <h3>Сургуулийн үйл ажиллагаа</h3>
+            <p>Сургуулийн өдөрлөг, арга хэмжээний мэдээ.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>Амжилт, бүтээл</h3>
+            <p>Суралцагчдын амжилт, бүтээлийн мэдээлэл.</p>
+        </div>
+    </div>
+
+    <div class="notice">
+        Эдгээр нь жишээ мэдээний картууд. Бодит мэдээ биш.
+    </div>
+</section>
+{% endblock %}

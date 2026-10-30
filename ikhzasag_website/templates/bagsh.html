@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% block title %}Багш нар{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <h1>Багш, хамт олон</h1>
+        <p>Мэргэжлийн боловсролын баг</p>
+    </div>
+</section>
+
+<main class="container content">
+    <h2>Манай багш нар</h2>
+    <p>
+        Энэ хэсэгт багш нарын бодит нэр, зураг,
+        мэргэжил, ажлын туршлагыг нэмж болно.
+    </p>
+
+    <div class="cards" style="margin-top:25px;">
+        <div class="card">
+            <div class="icon">👨‍🏫</div>
+            <h3>Мэргэжлийн багш</h3>
+            <p>Багшийн нэр болон танилцуулгыг энд оруулна.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👩‍🏫</div>
+            <h3>Сургалтын багш</h3>
+            <p>Багшийн нэр болон танилцуулгыг энд оруулна.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Дадлагын багш</h3>
+            <p>Багшийн нэр болон танилцуулгыг энд оруулна.</p>
+        </div>
+    </div>
+
+    <div class="notice">
+        Дээрх нь загвар картууд бөгөөд бодит багш нарын мэдээлэл биш.
+    </div>
+</main>
+{% endblock %}

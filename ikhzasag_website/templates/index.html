@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% block title %}Нүүр | Их Засаг Политехник Коллеж{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="eyebrow">WELCOME TO IKH ZASAG</div>
+        <h1>Ирээдүйгээ өнөөдөр бүтээ!</h1>
+        <p>
+            Өөрийн хүсэл мөрөөдөлд тохирсон мэргэжлээ сонгож,
+            мэдлэгээ бодит ур чадвар болгоорой.
+        </p>
+        <a class="btn" href="/mergejil">Мэргэжлүүд үзэх →</a>
+    </div>
+</section>
+
+<section class="section container">
+    <h2>Манай сургуулийн тухай</h2>
+    <p>Их Засаг Политехник Коллежийн сургалт, мэргэжлийн чиглэл болон элсэлтийн мэдээлэлтэй танилцаарай.</p>
+</section>
+
+<section class="section container">
+    <h2>Онцлох мэргэжлүүд</h2>
+    <div class="cards">
+        {% for m in majors[:6] %}
+        <div class="card">
+            <div class="icon">{{ m.icon }}</div>
+            <h3>{{ m.name }}</h3>
+            <p>Суралцах хугацаа: {{ m.duration }}</p>
+            <span class="pill">{{ m.type }}</span>
+            <a href="/mergejil/{{ m.slug }}">Дэлгэрэнгүй →</a>
+        </div>
+        {% endfor %}
+    </div>
+    <br>
+    <a class="btn" href="/mergejil">Бүх мэргэжил үзэх</a>
+</section>
+
+<section class="section" style="background:#e8eef6">
+    <div class="container">
+        <h2>Элсэлт эхэллээ!</h2>
+        <p>Өөрийн сонирхсон мэргэжлээ сонгож, элсэлтийн мэдээлэлтэй танилцаарай.</p>
+        <br>
+        <a class="btn" href="/elselt">Элсэлтийн мэдээлэл →</a>
+    </div>
+</section>
+{% endblock %}
